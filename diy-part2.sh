@@ -21,7 +21,7 @@ sed -i 's/192.168.1.1/172.16.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/255.255.255.0/255.255.240.0/g' package/base-files/files/bin/config_generate
 
 # Disable ULA Prefix
-sed -i 's/set network.globals.ula_prefix='auto'/set network.globals.ula_prefix=''/g' package/base-files/files/bin/config_generate
+sed -i 's/set network.globals.ula_prefix='auto'/delete network.globals.ula_prefix/g' package/base-files/files/bin/config_generate
 
 
 # emmmmmm
