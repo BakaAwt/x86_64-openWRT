@@ -20,6 +20,10 @@ sed -i 's/192.168.1.1/172.16.0.1/g' package/base-files/files/bin/config_generate
 # Modify CIDR
 sed -i 's/255.255.255.0/255.255.240.0/g' package/base-files/files/bin/config_generate
 
+# Disable ULA Prefix
+sed -i 's/set network.globals.ula_prefix='auto'/set network.globals.ula_prefix=''/g' package/base-files/files/bin/config_generate
+
+
 # emmmmmm
 sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
 sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt Compiled by Kirin'/g" ./package/lean/default-settings/files/zzz-default-settings
