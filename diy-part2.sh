@@ -12,8 +12,6 @@
 
 # BCM57810s kernel patch
 wget -O target/linux/x86/patches-5.4/600-bnx2x-warpcore-8727-2g5.patch https://raw.githubusercontent.com/JAMESMTL/snippets/master/bnx2x/patches/bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch
-wget -O target/linux/x86/patches-5.10/600-bnx2x-warpcore-8727-2g5.patch https://raw.githubusercontent.com/JAMESMTL/snippets/master/bnx2x/patches/bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch
-wget -O target/linux/x86/patches-5.15/600-bnx2x-warpcore-8727-2g5.patch https://raw.githubusercontent.com/JAMESMTL/snippets/master/bnx2x/patches/bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch
 # wget -O target/linux/x86/patches-5.10/600-bnx2x-warpcore-8727-2g5.patch https://raw.githubusercontent.com/JAMESMTL/snippets/master/bnx2x/patches/bnx2x_warpcore_8727_2_5g_sgmii_txfault.patch
 
 # Modify default IP
@@ -26,5 +24,5 @@ sed -i 's/255.255.255.0/255.255.240.0/g' package/base-files/files/bin/config_gen
 # haimeizuone, gun
 
 # emmmmmm
-sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt Compiled by Kirin'/g" ./package/lean/default-settings/files/zzz-default-settings
