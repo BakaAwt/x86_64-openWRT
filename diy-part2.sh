@@ -24,5 +24,5 @@ sed -i 's/255.255.255.0/255.255.240.0/g' package/base-files/files/bin/config_gen
 # haimeizuone, gun
 
 # emmmmmm
-sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
 sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt Compiled by Kirin'/g" ./package/lean/default-settings/files/zzz-default-settings
